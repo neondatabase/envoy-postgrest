@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-COPY --from=postgrest/postgrest:v12.2.8 /bin/postgrest /usr/bin/postgrest
+COPY --from=postgrest/postgrest:v13.0.0 /bin/postgrest /usr/bin/postgrest
 
 COPY envoy.yaml /etc/envoy/envoy.yaml
 
